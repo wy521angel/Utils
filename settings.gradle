@@ -1,0 +1,2 @@
+include ':app', ':utlislibrary'
+rootProject.name='Utils'
