@@ -30,4 +30,14 @@ public class ScreenUtils {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
                 context.getResources().getDisplayMetrics());
     }
+
+    /**
+     * 在 camera 旋转中，获取  camera 在Z轴的坐标点
+     * 方法做了不同手机屏幕的适配，-6是一个经验值
+     *
+     * @return
+     */
+    public static float getZForCamera() {
+        return -6 * Resources.getSystem().getDisplayMetrics().density;
+    }
 }
