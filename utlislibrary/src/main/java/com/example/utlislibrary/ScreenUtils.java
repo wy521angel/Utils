@@ -2,7 +2,9 @@ package com.example.utlislibrary;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.view.WindowManager;
 
 public class ScreenUtils {
 
@@ -39,5 +41,18 @@ public class ScreenUtils {
      */
     public static float getZForCamera() {
         return -6 * Resources.getSystem().getDisplayMetrics().density;
+    }
+
+    /**
+     * 获取屏幕信息
+     *
+     * @param context
+     * @return
+     */
+    public static DisplayMetrics getScreenMetrics(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics dm = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(dm);
+        return dm;
     }
 }
