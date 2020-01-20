@@ -16,5 +16,6 @@ public class MainActivity extends AppCompatActivity {
         //屏幕宽高
         int screenWidth = ScreenUtils.getScreenMetrics(this).widthPixels;
         int screenHeight = ScreenUtils.getScreenMetrics(this).heightPixels;
+        
     }
 }
